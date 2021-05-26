@@ -13,6 +13,52 @@
         justify-content: center;
         align-items: center;
       }
+      div{
+        text-transform: uppercase;
+        animation: move linear 2000ms infinite;  
+      }
+      @keyframes move {
+        0% {
+          text-shadow:
+            2px -2px 0 hsla(0, 100%, 50%, 1), 
+            1px -1px 0 hsla(0, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1), 
+            -1px 1px 0 hsla(180, 100%, 50%, 1)
+          ;
+        }
+        25% {    
+          text-shadow:      
+            -2px -2px 0 hsla(180, 100%, 50%, 1), 
+            -1px -1px 0 hsla(180, 100%, 50%, 1),
+            2px 2px 0 hsla(0, 100%, 50%, 1), 
+            1px 1px 0 hsla(0, 100%, 50%, 1)      
+          ;
+        }
+        50% {
+          text-shadow:
+            -2px 2px 0 hsla(0, 100%, 50%, 1), 
+            -1px 1px 0 hsla(0, 100%, 50%, 1),
+            2px -2px 0 hsla(180, 100%, 50%, 1), 
+            1px -1px 0 hsla(180, 100%, 50%, 1)
+          ;
+        }
+        75% {
+          text-shadow:
+            2px 2px 0 hsla(180, 100%, 50%, 1), 
+            1px 1px 0 hsla(180, 100%, 50%, 1),
+            -2px -2px 0 hsla(0, 100%, 50%, 1), 
+            -1px -1px 0 hsla(0, 100%, 50%, 1)      
+          ;
+        }
+        100% {
+          text-shadow:
+            2px -2px 0 hsla(0, 100%, 50%, 1), 
+            1px -1px 0 hsla(0, 100%, 50%, 1),
+            -2px 2px 0 hsla(180, 100%, 50%, 1), 
+            -1px 1px 0 hsla(180, 100%, 50%, 1)
+          ;
+        }  
+      }
     </style>
   </head>
   <body>
