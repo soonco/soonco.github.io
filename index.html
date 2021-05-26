@@ -24,11 +24,11 @@
         const karmaNode =  document.querySelector("#karma")
         const loveNode =  document.querySelector("#love")
         
-        karmaNode = karmaTime()
-        loveNode = loveTime()
+        karmaNode.innerHTML = karmaTime()
+        loveNode.innerHTML = loveTime()
         
         setInterval(function(){
-          karmaNode = karmaTime()
+          karmaNode.innerHTML = karmaTime()
         },1000)
       </script>
     </div>
