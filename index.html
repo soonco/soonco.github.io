@@ -6,17 +6,14 @@
   </head>
   <body>
     <div>
-      <script>document.write(`宝贝，我们的缘分始于${parseInt((new Date()-new Date("2018-10-19 16:59"))*1/1000/60/60)}小时前，爱的火种在20年圣诞23:23分点亮，${parseInt((((new Date()-new Date("2020-12-25 23:23"))*1/1000/60)-((new Date()-new Date("2021-01-16 00:00"))*1/1000/60)))}分钟后彻底燃烧直至一发不可收拾，将直到永远`)</script>
-    </div>
-    <div>
-      宝贝，我们的缘分始于<span id="karma"></span>小时前，爱的火种在20年圣诞23:23分点亮，<span id="love"></span>分钟后彻底燃烧直至一发不可收拾，将直到天地老
+      宝贝，我们的缘分始于<span id="karma"></span>小时前，爱的火种在20年圣诞23:23分点亮，<span id="love"></span>秒后彻底燃烧直至一发不可收拾，将直到天地老
       <script>
         const now = new Date()
         const karmaStartTime = new Date("2018-10-19 16:59")
-        const christmasTime = (now-new Date("2020-12-25 23:23"))/1000/60
+        const christmasTime = now-new Date("2020-12-25 23:23")
         const loveStartTime = new Date("2021-01-16 00:00")
         const karmaTime = parseInt((now-karmaStartTime)/1000/60/60)
-        const loveTime = parseInt(christmasTime-(now-loveStartTime)/1000/60)
+        const loveTime = parseInt((christmasTime-(now-loveStartTime))/1000)
 
         document.querySelector("#karma").innerHTML = karmaTime
         document.querySelector("#love").innerHTML = loveTime
