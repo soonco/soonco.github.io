@@ -20,6 +20,10 @@
         flex-direction: column;
         align-items: center;
       }
+      .anim{
+        text-transform: uppercase;
+        animation: move linear 2000ms infinite;
+      }
       p{
         margin-bottom:0;
       }
@@ -69,11 +73,11 @@
   </head>
   <body>
     <div>
-      <p>宝贝，我们的缘分始于<span id="karma"></span>秒前</p>
-      <p>爱的火种在2020年圣诞23:23分点亮</p>
-      <p><span id="love"></span>分后彻底燃烧，直至一发不可收拾</p>
+      <p>宝贝，我们的缘分始于<span id="karma" class="anim"></span>秒前</p>
+      <p>爱的火种在<span class="anim">2020</span>年圣诞<span class="anim">23:23</span>分点亮</p>
+      <p><span id="love" class="anim"></span>分后彻底燃烧，直至一发不可收拾</p>
       <p>将直到天荒地老......</p>
-      <p>契合的灵魂已缠绕了<span id="soul"></span></p>
+      <p>契合的灵魂已缠绕了<span id="soul" class="anim"></span>小时</p>
       <span id="soulSum"></span>
       <script>
         const karmaStartTime = new Date("2018-10-19T16:59")
@@ -107,14 +111,14 @@
         loveNode.innerHTML = loveTime()
 
         soulNode.innerHTML = (function(time){
-            return `${time.hh}小时`
+            return `${time.hh}`
         })(loveAbsouluteTime)
 
         soulSumNode.innerHTML = (function(time){
             return `≈${time.dd}天≈${time.mm}月≈${time.yy}年`
         })(loveAbsouluteTime)
 
-        titleNode.innerText = `kk&77携手走过了${loveAbsouluteTime().dd}天`
+        titleNode.innerText = `kk&77携手走过了${loveAbsouluteTime.dd}天`
         
         setInterval(function(){
           karmaNode.innerHTML = karmaTime()
