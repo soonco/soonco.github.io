@@ -87,7 +87,7 @@
           const hh = Math.round((ss/60) * 100) / 100
           const dd = Math.round((hh/24) * 100) / 100
           const mm = Math.round((dd/30.43) * 100) / 100
-          const yy = Math.round((mm/365.35) * 100) / 100
+          const yy = Math.round((mm/12) * 100) / 100
           return { ss,hh,dd,mm,yy }
         })
 
