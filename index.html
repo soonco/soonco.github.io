@@ -75,8 +75,8 @@
     <div>
       <p>宝贝，我们的缘分始于<span id="karma" class="anim"></span>秒前</p>
       <p>爱的火种在<span class="anim">2020</span>年圣诞<span class="anim">23:23</span>分点亮</p>
-      <p><span id="love" class="anim"></span>分后彻底燃烧，直至一发不可收拾</p>
-      <p>将直到天荒地老......</p>
+      <p><span id="love" class="anim"></span>小时后彻底燃烧，一发不可收拾</p>
+      <p>将直至天荒地老......</p>
       <p>契合的灵魂已缠绕了<span id="soul" class="anim"></span>小时</p>
       <span id="soulSum"></span>
       <script>
@@ -98,7 +98,7 @@
         })()
 
         const loveTime =  (function(){
-          return parseInt((christmasTime - (new Date() - loveStartTime))/1000/60)
+          return parseInt((christmasTime - (new Date() - loveStartTime))/1000/60/60)
         })
         
         const karmaNode =  document.querySelector("#karma")
@@ -115,7 +115,7 @@
         })(loveAbsouluteTime)
 
         soulSumNode.innerHTML = (function(time){
-            return `≈${time.dd}天≈${time.mm}月≈${time.yy}年`
+            return `≈<span class="anim">${time.dd}</span>天≈<span class="anim">${time.mm}</span>月≈<span class="anim">${time.yy}</span>年`
         })(loveAbsouluteTime)
 
         titleNode.innerText = `kk&77携手走过了${loveAbsouluteTime.dd}天`
