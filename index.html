@@ -73,6 +73,7 @@
       <p><span id="love"></span>分后彻底燃烧，直至一发不可收拾</p>
       <p>将直到天荒地老......</p>
       <p>契合的灵魂已缠绕了<span id="soul"></span></p>
+      <span id="soulSum"></span>
       <script>
         const karmaStartTime = new Date("2018-10-19T16:59")
         const christmasTime = new Date() - new Date("2020-12-25T23:23")
@@ -89,7 +90,7 @@
           const mm = Math.round((dd/30.43) * 100) / 100
           const yy = Math.round((mm/12) * 100) / 100
           return { ss,hh,dd,mm,yy }
-        })
+        })()
 
         const loveTime =  (function(){
           return parseInt((christmasTime - (new Date() - loveStartTime))/1000/60)
@@ -98,13 +99,20 @@
         const karmaNode =  document.querySelector("#karma")
         const loveNode =  document.querySelector("#love")
         const soulNode =  document.querySelector("#soul")
+        const soulSumNode =  document.querySelector("#soulSum")
         const titleNode = document.querySelector("title")
         
         karmaNode.innerHTML = karmaTime()
         loveNode.innerHTML = loveTime()
+
         soulNode.innerHTML = (function(time){
-            return `${time.hh}小时≈${time.dd}天≈${time.mm}月≈${time.yy}年`
-        })(loveAbsouluteTime())
+            return `${time.hh}小时`
+        })(loveAbsouluteTime)
+
+        soulSumNode.innerHTML = (function(time){
+            return `≈${time.dd}天≈${time.mm}月≈${time.yy}年`
+        })(loveAbsouluteTime)
+
         titleNode.innerText = `kk&77携手走过了${loveAbsouluteTime().dd}天`
         
         setInterval(function(){
